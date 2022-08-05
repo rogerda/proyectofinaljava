@@ -60,7 +60,7 @@ function procesarCompra() {
             event.preventDefault();
 
             // Cambiar servive id y servicio
-            var service_id = "Vinosx77";
+            var service_id = "Vinosx777";
             var template_id = "template_0mcuqu8";
 
             const cargandoGif = document.querySelector('#cargando');
