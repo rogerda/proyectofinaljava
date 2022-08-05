@@ -49,9 +49,9 @@ function procesarCompra() {
     }
     else {
         
-        //aqui se coloca el user id generado en el emailJS
+        //aqui se coloca el user id generado en el emailJS cuanra enlazada con gmail
         (function () {
-            emailjs.init('user_N0pOc2XbvkTWerQs4');
+            emailjs.init("user_N0pOc2XbvkTWerQs4");
         })();
 
         var myform = $("form#procesar-pago");
