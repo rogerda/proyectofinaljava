@@ -51,7 +51,7 @@ function procesarCompra() {
         
         //aqui se coloca el user id generado en el emailJS
         (function () {
-            emailjs.init("user_CEozz2F39lJJOLF5mJiDA");
+            emailjs.init('user_N0pOc2XbvkTWerQs4');
         })();
 
         var myform = $("form#procesar-pago");
@@ -59,7 +59,7 @@ function procesarCompra() {
         myform.submit( (event) => {
             event.preventDefault();
 
-            // Change to your service ID, or keep using the default service
+            // Cambiar servive id y servicio
             var service_id = "default_service";
             var template_id = "template_3SA9LsqQ";
 
@@ -85,7 +85,7 @@ function procesarCompra() {
 
                 }, (err) => {
                     alert("Error al enviar el email\r\n Response:\n " + JSON.stringify(err));
-                    // myform.find("button").text("Sendd");
+                    // myform.find("boton").text("enviar");
                 });
 
             return false;
