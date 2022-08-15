@@ -237,3 +237,42 @@ class Carrito {
         }
     }
 }
+
+const divBancos = document.getElementById("divBancos")
+fetch('https://criptoya.com/api/dolar')
+	.then(response => response.json())
+	.then(({oficial, solidario, blue, mep, ccb, ccl}) => {
+        divBancos.innerHTML =""
+        divBancos.innerHTML =`
+        <div>
+        <h2> Información Dolar a Vino</h2>
+        <p> Oficial: $: ${oficial}</p>
+        <p> Solidario: $: ${solidario}</p>
+        <p> Blue: $: ${blue}</p>
+        <p> Mep: $: ${mep}</p>
+        <p> Contado Bitcoin: $: ${ccb}</p>
+        <p> Contalo Liqui: $: ${ccl}</p>
+        </div> 
+        `
+    }) 
+
+
+setInterval(() => {
+    fetch('https://criptoya.com/api/dolar')
+	.then(response => response.json())
+	.then(({oficial, solidario, blue, mep, ccb, ccl}) => {
+        divBancos.innerHTML =""
+        divBancos.innerHTML =`
+        <div>
+        <h2> Información Dolar a Vino</h2>
+        <p> Oficial: $: ${oficial}</p>
+        <p> Solidario: $: ${solidario}</p>
+        <p> Blue: $: ${blue}</p>
+        <p> Mep: $: ${mep}</p>
+        <p> Contado Bitcoin: $: ${ccb}</p>
+        <p> Contalo Liqui: $: ${ccl}</p>
+        </div> 
+        `
+    }) 
+},30000)
+
